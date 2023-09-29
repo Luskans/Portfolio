@@ -1,0 +1,14 @@
+{
+  "name": "ex-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/scss/main.scss:./assets/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2"
+  }
+}
