@@ -28,6 +28,7 @@ p {
 }
 
 body {
+    // background-color: rgb(255, 247, 226) !important;
     background-color: white !important;
 }
 
@@ -59,7 +60,7 @@ h1 {
 
     &__items {
     font-size: 1.2em !important;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
     letter-spacing: 4px;
     
         &--scroll {
@@ -123,16 +124,16 @@ h1 {
 
     &__buttons {
         button {
-            background-color: rgba($grey, 0.3);
+            background-color: rgba($grey, 0.5);
             border: none;
 
             &:hover {
                 box-shadow: 0 0 5px $grey;
                 background-color: transparent;
-                color: rgba($grey, 0.3);
+                color: rgba($grey, 0.5);
 
                 svg path {
-                    stroke: #80808050;
+                    stroke: #80808070;
                 }
             }
         }
@@ -176,7 +177,7 @@ h1 {
         }
 
         &__stamp {
-            background-color: $grey;
+            background-color: rgba($grey, 0.5);
             border-radius: 4px;
             color: white;
             padding-left: 6px;

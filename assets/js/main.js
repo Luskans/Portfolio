@@ -70,20 +70,17 @@ function sectionScroll() {
     const statutPosition = statut.getBoundingClientRect();
     const profilPosition = profil.getBoundingClientRect();
     const portfolioPosition = portfolio.getBoundingClientRect();
-
-    if (statutPosition.top === 0 || statutPosition.bottom === 0) {
+    if (statutPosition.top <= 150 && statutPosition.bottom >= 350) {
+        navItems.forEach(navItem => navItem.classList.remove('on-part'));
         navItems[0].classList.add('on-part');
-        navItems[1].classList.remove('on-part');
-
-    } else if (profilPosition.top === 0 || profilPosition.bottom === 0) {
+    }
+    if (profilPosition.top <= 150 && profilPosition.bottom >= 350) {
+        navItems.forEach(navItem => navItem.classList.remove('on-part'));
         navItems[1].classList.add('on-part');
-        navItems[0].classList.remove('on-part');
-        navItems[2].classList.remove('on-part');
-
-    } else if (portfolioPosition.top === 0 || portfolioPosition.bottom === 0) {
+    }
+    if (portfolioPosition.top <= 150 && portfolioPosition.bottom >= 350) {
+        navItems.forEach(navItem => navItem.classList.remove('on-part'));
         navItems[2].classList.add('on-part');
-        navItems[1].classList.remove('on-part');
-        navItems[0].classList.remove('on-part');
     }
 }
 

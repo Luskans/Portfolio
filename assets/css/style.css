@@ -46,7 +46,7 @@ h1 {
 }
 .nav__items {
   font-size: 1.2em !important;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   letter-spacing: 4px;
 }
 .nav__items--scroll {
@@ -101,16 +101,16 @@ h1 {
   min-height: 400px;
 }
 .profil__buttons button {
-  background-color: rgba(128, 128, 128, 0.3);
+  background-color: rgba(128, 128, 128, 0.5);
   border: none;
 }
 .profil__buttons button:hover {
   box-shadow: 0 0 5px #808080;
   background-color: transparent;
-  color: rgba(128, 128, 128, 0.3);
+  color: rgba(128, 128, 128, 0.5);
 }
 .profil__buttons button:hover svg path {
-  stroke: rgba(128, 128, 128, 0.3137254902);
+  stroke: rgba(128, 128, 128, 0.4392156863);
 }
 
 .portfolio {
@@ -146,7 +146,7 @@ h1 {
   animation: slideIn 1.2s ease-in-out forwards;
 }
 .portfolio .sticker__stamp {
-  background-color: #808080;
+  background-color: rgba(128, 128, 128, 0.5);
   border-radius: 4px;
   color: white;
   padding-left: 6px;
