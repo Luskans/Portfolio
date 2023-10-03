@@ -28,21 +28,8 @@ p {
 }
 
 body {
-    // background-color: rgb(255, 247, 226) !important;
+    // background-color: rgb(248, 246, 242) !important;
     background-color: white !important;
-}
-
-.header__statut, .nav__items {
-    letter-spacing: 4px;
-}
-
-h1 {
-    // font-family: 'Rajdhani', sans-serif;
-    letter-spacing: 20px;
-    line-height: 100px;
-    font-family: 'Quicksand', sans-serif;
-    width: 100%;
-    text-align: center;
 }
 
 .nav {
@@ -92,6 +79,19 @@ h1 {
         animation: lightning 5s infinite;
         transition: all 0.3s linear;
     }
+
+    &__title {
+        // font-family: 'Rajdhani', sans-serif;
+        letter-spacing: 20px;
+        line-height: 100px;
+        font-family: 'Quicksand', sans-serif;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__statut {
+        letter-spacing: 4px;
+    }
 }
 
 .profil {
@@ -115,6 +115,14 @@ h1 {
 
         img {
             width: 100%;
+        }
+    }
+
+    &__mail p {
+        transition: all 0.2s linear;
+
+        &:hover {
+            letter-spacing: 3px;
         }
     }
 

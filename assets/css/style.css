@@ -20,18 +20,6 @@ body {
   background-color: white !important;
 }
 
-.header__statut, .nav__items {
-  letter-spacing: 4px;
-}
-
-h1 {
-  letter-spacing: 20px;
-  line-height: 100px;
-  font-family: "Quicksand", sans-serif;
-  width: 100%;
-  text-align: center;
-}
-
 .nav {
   position: fixed;
   width: 100%;
@@ -76,6 +64,16 @@ h1 {
   animation: lightning 5s infinite;
   transition: all 0.3s linear;
 }
+.header__title {
+  letter-spacing: 20px;
+  line-height: 100px;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  text-align: center;
+}
+.header__statut {
+  letter-spacing: 4px;
+}
 
 .profil {
   padding-top: 100px;
@@ -96,6 +94,12 @@ h1 {
 }
 .profil__picture img, .profil__text img {
   width: 100%;
+}
+.profil__mail p {
+  transition: all 0.2s linear;
+}
+.profil__mail p:hover {
+  letter-spacing: 3px;
 }
 .profil__right {
   min-height: 400px;
