@@ -15,9 +15,25 @@ p {
   letter-spacing: 2px;
   font-family: "Quicksand", sans-serif;
 }
+@media screen and (max-width: 450px) {
+  p {
+    font-size: 0.9em !important;
+  }
+}
 
 body {
-  background-color: white !important;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(50% 50% at 100% 100%, rgba(198, 255, 218, 0.4) 0%, rgba(255, 255, 255, 0) 92.09%), radial-gradient(50% 100% at 0% 80%, rgba(188, 235, 255, 0.7) 0%, rgba(255, 255, 255, 0) 92.09%), radial-gradient(80% 80% at 20% 100%, rgba(253, 182, 206, 0.7) 0%, rgba(255, 255, 255, 0) 92.09%), radial-gradient(50% 80% at 100% 0%, rgba(253, 241, 172, 0.7) 0%, rgba(255, 255, 255, 0) 92.09%);
+  background-attachment: fixed;
+  z-index: -1;
 }
 
 .nav {
@@ -37,8 +53,18 @@ body {
   transition: all 0.4s ease-in-out;
   letter-spacing: 4px;
 }
+@media screen and (max-width: 450px) {
+  .nav__items {
+    font-size: 1em !important;
+  }
+}
 .nav__items--scroll {
   font-size: 1em !important;
+}
+@media screen and (max-width: 450px) {
+  .nav__items--scroll {
+    font-size: 0.8em !important;
+  }
 }
 .nav__items:hover {
   padding-bottom: 6px;
@@ -50,17 +76,28 @@ body {
 }
 
 .header {
-  height: 100vh;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  height: 100%;
+  min-height: 100vh;
+  width: 80%;
+  padding: 100px 20px 100px 20px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+@media screen and (max-width: 450px) {
+  .header {
+    padding: 50px 10px 50px 10px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .header {
+    min-height: 80vh;
+  }
 }
 .header__light {
   background-color: greenyellow;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  margin-top: 4px;
+  margin-top: 2px;
   animation: lightning 5s infinite;
   transition: all 0.3s linear;
 }
@@ -71,38 +108,61 @@ body {
   width: 100%;
   text-align: center;
 }
+@media screen and (max-width: 520px) {
+  .header__title {
+    min-width: 400px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header__title {
+    letter-spacing: 14px;
+    line-height: 80px;
+  }
+}
 .header__statut {
   letter-spacing: 4px;
 }
 
 .profil {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  width: 80%;
+  padding: 100px 20px 100px 20px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.3);
   opacity: 0;
+}
+@media screen and (max-width: 450px) {
+  .profil {
+    padding: 50px 10px 50px 10px;
+  }
 }
 .profil.in-view {
   animation: slideIn 1.2s ease-in-out forwards;
 }
 .profil__picture, .profil__text {
   width: 400px;
-  min-width: 400px;
+  min-width: 350px;
   text-align: justify;
+}
+@media screen and (max-width: 450px) {
+  .profil__picture, .profil__text {
+    padding: 0 40px 0 40px;
+  }
 }
 .profil__picture span, .profil__text span {
   font-weight: bolder;
 }
 .profil__picture img, .profil__text img {
   width: 100%;
+  filter: grayscale(100%);
+  transition: all 0.5s linear;
+}
+.profil__picture img:hover, .profil__text img:hover {
+  filter: grayscale(0%);
 }
 .profil__mail p {
   transition: all 0.2s linear;
 }
 .profil__mail p:hover {
   letter-spacing: 3px;
-}
-.profil__right {
-  min-height: 400px;
 }
 .profil__buttons button {
   background-color: rgba(128, 128, 128, 0.5);
@@ -118,22 +178,20 @@ body {
 }
 
 .portfolio {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  width: 80%;
+  padding: 100px 20px 100px 20px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
+@media screen and (max-width: 450px) {
+  .portfolio {
+    padding: 50px 10px 50px 10px;
+  }
+}
 .portfolio__text {
-  min-width: 400px;
   opacity: 0;
 }
 .portfolio__text.in-view {
   animation: slideIn 1.2s ease-in-out forwards;
-}
-@media (max-width: 600px) {
-  .portfolio__text {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
 }
 .portfolio__icons svg {
   opacity: 0;
@@ -142,12 +200,18 @@ body {
   animation: slideIn 1.2s ease-in-out forwards;
 }
 .portfolio .sticker {
-  width: 400px;
   max-width: 400px;
+  width: 100%;
   opacity: 0;
 }
 .portfolio .sticker.in-view {
   animation: slideIn 1.2s ease-in-out forwards;
+}
+@media screen and (max-width: 400px) {
+  .portfolio .sticker__stamps {
+    padding: 0 20px 0 20px;
+    justify-content: center;
+  }
 }
 .portfolio .sticker__stamp {
   background-color: rgba(128, 128, 128, 0.5);
@@ -160,8 +224,92 @@ body {
   font-size: 0.9em;
   text-align: justify;
 }
-.portfolio .sticker img {
-  width: 100%;
+@media screen and (max-width: 400px) {
+  .portfolio .sticker__text {
+    padding: 0 20px 0 20px;
+  }
+}
+.portfolio .sticker__image {
+  max-width: 400px;
+  min-width: 360px;
+  height: 225px;
+  filter: grayscale(100%);
+}
+.portfolio .sticker__image:hover {
+  background-position-y: bottom;
+  filter: grayscale(0%);
+}
+.portfolio .sticker__image--1 {
+  background: url("../images/luxury-service.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 5s linear;
+}
+.portfolio .sticker__image--2 {
+  background: url("../images/payetonpote.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 2s linear;
+}
+.portfolio .sticker__image--3 {
+  background: url("../images/combat.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 1s linear;
+}
+.portfolio .sticker__image--4 {
+  background: url("../images/comparOperator.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 3s linear;
+}
+.portfolio .sticker__image--5 {
+  background: url("../images/tower-defense.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 3s linear;
+}
+.portfolio .sticker__image--6 {
+  background: url("../images/quizz.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 3s linear;
+}
+.portfolio .sticker__image--7 {
+  background: url("../images/drumpad.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 3s linear;
+}
+.portfolio .sticker__image--8 {
+  background: url("../images/animation-pokemon.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 3s linear;
+}
+.portfolio .sticker__image--9 {
+  background: url("../images/the-mountain.png");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-position-y 8s linear;
 }
 .portfolio__text {
   text-align: justify;

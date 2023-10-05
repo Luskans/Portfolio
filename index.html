@@ -27,7 +27,8 @@
 
 </head>
 
-<body class="">
+<body class="d-flex flex-column align-items-center">
+    <div class="gradient"></div>
     <nav class="nav d-flex justify-content-center align-items-center gap-5">
         <a href="#statut">
             <p class="nav__items">statut</p>
@@ -40,24 +41,26 @@
         </a>
     </nav>
 
-    <header id="statut" class="statut header d-flex flex-column justify-content-center align-items-center gap-5">
+    <header id="statut" class="header d-flex flex-column justify-content-center align-items-center gap-5">
         <h1 class="header__title">Développeur web junior</h1>
-        <div class="d-flex justify-content-center align-items-center gap-3 w-100">
-            <div class="header__light"></div>
-            <p class="header__statut">Statut recrutement : Ouvert</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3 w-100">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+                <div class="header__light"></div>
+                <p class="header__statut">Statut recrutement : </p>
+            </div>
+            <p>Ouvert</p>
         </div>
     </header>
 
-    <main class="">
+    <main class="d-flex flex-column align-items-center">
 
         <section id="profil" class="profil">
             <div class="d-flex flex-wrap justify-content-center gap-5">
                 <div class="profil__picture">
-                    <!-- <img src="/assets/images/ai-generated-8094077_1920.jpg" alt="profile picture"> -->
                     <img src="/assets/images/picture.png" alt="profile picture">
                 </div>
 
-                <div class="profil__right d-flex flex-column align-items-center justify-content-between">
+                <div class="profil__right d-flex flex-column align-items-center justify-content-between gap-5">
                     <div class="profil__text">
                         <p>Actuellement en formation à Saint-Etienne avec <span>Garage404</span> et
                             <span>Simplon</span>, je recherche un stage
@@ -136,15 +139,13 @@
 
         <section id="projets" class="portfolio d-flex flex-column align-items-center justify-content-center gap-5">
 
-            <div class="container">
-                <p class="portfolio__text">Au cours d'une année dense en mode bootcamp, j'ai pu réaliser, en utilisant
-                    différentes technologies, de nombreux projets comme avec les quelques exemples ci dessous.
-                    Cette formation m'a permis d'acquérir des compétences tant sur le front-end
-                    que le back-end pour créer des sites web responsives de plus en plus robustes et sécurisés.</p>
-            </div>
+            <p class="portfolio__text">Au cours d'une année dense en mode bootcamp, j'ai pu réaliser, en utilisant
+                différentes technologies, de nombreux projets comme avec les quelques exemples ci dessous.
+                Cette formation m'a permis d'acquérir des compétences tant sur le front-end
+                que le back-end pour créer des sites web responsives de plus en plus robustes et sécurisés.</p>
 
             <div class="portfolio__icons">
-                <div class="container d-flex flex-wrap justify-content-center gap-5">
+                <div class="d-flex flex-wrap justify-content-center gap-5">
                     <svg height="40px" width="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -295,12 +296,14 @@
                 </div>
             </div>
 
-            <div class="container d-flex justify-content-center flex-wrap gap-5">
+            <div class="d-flex justify-content-center flex-wrap gap-5">
                 <div class="sticker d-flex flex-column gap-3">
                     <a href="#" target="_blank">
-                        <img src="#">
+                        <div class="sticker__image sticker__image--1">
+                        <!-- <img src="./assets/images/luxury-service.png"> -->
+                        </div>
                     </a>
-                    <div class="d-flex gap-3">
+                    <div class="sticker__stamps d-flex gap-2">
                         <p class="sticker__stamp">symfony</p>
                         <p class="sticker__stamp">twig</p>
                         <p class="sticker__stamp">mysql</p>
@@ -310,10 +313,12 @@
                 </div>
 
                 <div class="sticker d-flex flex-column gap-3">
-                    <a href="#" target="_blank">
-                        <img src="#">
+                    <a href="./assets/images/payetonpote.png" target="_blank">
+                        <div class="sticker__image sticker__image--2">
+                            <!-- <img src="./assets/images/luxury-service.png"> -->
+                        </div>
                     </a>
-                    <div class="d-flex gap-3">
+                    <div class="sticker__stamps d-flex gap-2">
                         <p class="sticker__stamp">symfony</p>
                         <p class="sticker__stamp">twig</p>
                         <p class="sticker__stamp">mysql</p>
@@ -323,13 +328,14 @@
 
                 <div class="sticker d-flex flex-column gap-3">
                     <a href="#" target="_blank">
-                        <img src="#">
+                        <div class="sticker__image sticker__image--3">
+                            <!-- <img src="./assets/images/luxury-service.png"> -->
+                        </div>
                     </a>
-                    <div class="d-flex gap-2">
+                    <div class="sticker__stamps d-flex gap-2">
                         <p class="sticker__stamp">animation</p>
                         <p class="sticker__stamp">sass</p>
                         <p class="sticker__stamp">php</p>
-                        <!-- <p class="sticker__stamp">mysql</p> -->
                         <p class="sticker__stamp">javascript</p>
                     </div>
                     <p class="sticker__text">Création d'un jeu de combat en POO from scratch, avec l'utilisation de PHP,
@@ -337,10 +343,10 @@
                 </div>
 
                 <div class="sticker d-flex flex-column gap-3">
-                    <a href="#" target="_blank">
-                        <img src="#">
+                    <a href="https://sylvain-comparoperator.projets.garage404.com" target="_blank">
+                        <div class="sticker__image sticker__image--4"></div>
                     </a>
-                    <div class="d-flex gap-2">
+                    <div class="sticker__stamps d-flex gap-2">
                         <p class="sticker__stamp">figma</p>
                         <p class="sticker__stamp">css</p>
                         <p class="sticker__stamp">php</p>
@@ -352,10 +358,22 @@
                 </div>
 
                 <div class="sticker d-flex flex-column gap-3">
-                    <a href="#" target="_blank">
-                        <img src="#">
+                    <a href="https://sylvain-tower-defense.projets.garage404.com" target="_blank">
+                        <div class="sticker__image sticker__image--5"></div>
                     </a>
-                    <div class="d-flex gap-3">
+                    <div class="sticker__stamps d-flex gap-2">
+                        <p class="sticker__stamp">html</p>
+                        <p class="sticker__stamp">canvas</p>
+                        <p class="sticker__stamp">javascript</p>
+                    </div>
+                    <p class="sticker__text">Création d'un tower defense en javascript avec canvas.</p>
+                </div>
+
+                <div class="sticker d-flex flex-column gap-3">
+                    <a href="https://sylvain-quizz.projets.garage404.com" target="_blank">
+                        <div class="sticker__image sticker__image--6"></div>
+                    </a>
+                    <div class="sticker__stamps d-flex gap-3">
                         <p class="sticker__stamp">figma</p>
                         <p class="sticker__stamp">css</p>
                         <p class="sticker__stamp">php</p>
@@ -366,23 +384,22 @@
                 </div>
 
                 <div class="sticker d-flex flex-column gap-3">
-                    <a href="#" target="_blank">
-                        <img src="#">
+                    <a href="https://sylvain-drumpad.projets.garage404.com" target="_blank">
+                        <div class="sticker__image sticker__image--7"></div>
                     </a>
-                    <div class="d-flex gap-2">
+                    <div class="sticker__stamps d-flex gap-2">
                         <p class="sticker__stamp">html</p>
                         <p class="sticker__stamp">css</p>
                         <p class="sticker__stamp">javascript</p>
                     </div>
-                    <p class="sticker__text">Création d'un drumpad avec javascript, utilisation des event listeners et
-                        fonctions asynchrones.</p>
+                    <p class="sticker__text">Création d'un drumpad avec javascript, utilisation des event listeners.</p>
                 </div>
 
                 <div class="sticker d-flex flex-column gap-3">
-                    <a href="#" target="_blank">
-                        <img src="#">
+                    <a href="https://sylvain-animation-pokemon.projets.garage404.com" target="_blank">
+                        <div class="sticker__image sticker__image--8"></div>
                     </a>
-                    <div class="d-flex gap-2">
+                    <div class="sticker__stamps d-flex gap-2">
                         <p class="sticker__stamp">html</p>
                         <p class="sticker__stamp">css</p>
                         <p class="sticker__stamp">animation</p>
@@ -391,10 +408,10 @@
                 </div>
 
                 <div class="sticker d-flex flex-column gap-3">
-                    <a href="#" target="_blank">
-                        <img src="#">
+                    <a href="https://sylvain-the-mountain.projets.garage404.com" target="_blank">
+                        <div class="sticker__image sticker__image--9"></div>
                     </a>
-                    <div class="d-flex gap-2">
+                    <div class="sticker__stamps d-flex gap-2">
                         <p class="sticker__stamp">html</p>
                         <p class="sticker__stamp">css</p>
                         <p class="sticker__stamp">bootstrap</p>
