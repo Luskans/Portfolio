@@ -29,16 +29,18 @@
 
 <body class="d-flex flex-column align-items-center">
     <div class="gradient"></div>
-    <nav class="nav d-flex justify-content-center align-items-center gap-5">
-        <a href="#statut">
-            <p class="nav__items">statut</p>
-        </a>
-        <a href="#profil">
-            <p class="nav__items">contact</p>
-        </a>
-        <a href="#projets">
-            <p class="nav__items">projets</p>
-        </a>
+    <nav class="nav">
+        <ul class="nav__items d-flex justify-content-center align-items-center gap-5">
+            <a href="#statut">
+                <li class="nav__item">statut</li>
+            </a>
+            <a href="#profil">
+                <li class="nav__item">contact</li>
+            </a>
+            <a href="#projets">
+                <li class="nav__item">projets</li>
+            </a>
+        </ul>
     </nav>
 
     <header id="statut" class="header d-flex flex-column justify-content-center align-items-center gap-5">
@@ -114,7 +116,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="#" download="MonCV.pdf">
+                        <a href="./assets/documents/cv.pdf" download="MonCV.pdf">
                             <button class="btn btn-secondary d-flex gap-2">
                                 <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
@@ -288,9 +290,9 @@
                                 d="M2.238,13.935c.145-.447,2.468-.259,4.54.293,2.5.666,7,2.344,11.651,8.606A12.544,12.544,0,0,1,20.279,30H10.386a21.875,21.875,0,0,0-.175-4.62,14.9,14.9,0,0,0-2.459-7.158C5.441,15.159,2.055,14.5,2.238,13.935Z"
                                 style="fill:#78787880"></path>
                             <path d="M17.3,21.323a1.753,1.753,0,1,1-.513-1.24A1.748,1.748,0,0,1,17.3,21.323Z"
-                                style="fill:#fff"></path>
+                                style="fill: transparent"></path>
                             <path d="M21.975,21.323a1.753,1.753,0,1,1-.513-1.24A1.748,1.748,0,0,1,21.975,21.323Z"
-                                style="fill:#fff"></path>
+                                style="fill: transparent"></path>
                         </g>
                     </svg>
                 </div>
@@ -313,7 +315,7 @@
                 </div>
 
                 <div class="sticker d-flex flex-column gap-3">
-                    <a href="./assets/images/payetonpote.png" target="_blank">
+                    <a href="https://sylvain-payetonpote.projets.garage404.com" target="_blank">
                         <div class="sticker__image sticker__image--2">
                             <!-- <img src="./assets/images/luxury-service.png"> -->
                         </div>

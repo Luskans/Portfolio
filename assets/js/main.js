@@ -1,5 +1,5 @@
 const nav = document.querySelector('.nav');
-const navItems = document.querySelectorAll('.nav__items');
+const navItems = document.querySelectorAll('.nav__item');
 
 const statut = document.querySelector('#statut');
 const profil = document.querySelector('.profil');
