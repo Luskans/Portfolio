@@ -8,6 +8,7 @@ $grey: #808080;
     padding: 100px 20px 100px 20px;
     border-bottom: 1px solid rgb($grey, 0.3);
     @media screen and (max-width: 450px) {
+        width: 90%;
         padding: 50px 10px 50px 10px;
     }
 }
@@ -60,6 +61,21 @@ body {
     rgba(255, 255, 255, 0) 92.09%);
     background-attachment: fixed;
     z-index: -1;
+    @media screen and (max-width: 450px) {
+        background: 
+        radial-gradient(50% 50% at 110% 30%,
+        rgba(252, 115, 168, 0.25) 0%,
+        rgba(255, 255, 255, 0) 92.09%),
+        radial-gradient(30% 40% at 105% 50%,
+        rgba(113, 179, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0) 92.09%),
+        radial-gradient(40% 40% at 20% 110%,
+        rgba(180, 162, 247, 0.35) 0%,
+        rgba(255, 255, 255, 0) 92.09%),
+        radial-gradient(100% 60% at -20% 80%,
+        rgba(120, 173, 243, 0.35) 0%,
+        rgba(255, 255, 255, 0) 92.09%);
+    }
 }
 
 .nav {
@@ -88,7 +104,7 @@ body {
         letter-spacing: 4px;
         @media screen and (max-width: 450px) {
             font-size: 0.9em !important;
-    }
+        }
     
         &--scroll {
             font-size: 0.9em !important;
@@ -113,9 +129,9 @@ body {
     height: 100%;
     min-height: 100vh;
     @include box-space();
-    @media screen and (max-width: 520px) {
-        min-height: 80vh;
-    }
+    // @media screen and (max-width: 520px) {
+    //     min-height: 80vh;
+    // }
 
     &__light {
         background-color: greenyellow;
@@ -211,6 +227,9 @@ body {
 
 .portfolio {
     @include box-space();
+    @media screen and (max-width: 450px) {
+        padding: 50px 0 50px 0;
+    }
 
     &__text {
         opacity: 0;
@@ -267,7 +286,7 @@ body {
 
         &__image {
             max-width: 400px;
-            // min-width: 340px;
+            min-width: 340px;
             height: 225px;
             filter: grayscale(100%);         
 
