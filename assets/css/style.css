@@ -229,9 +229,16 @@ main {
   font-weight: bolder;
 }
 .profil__picture img, .profil__text img {
-  width: 100%;
+  width: 400px;
+  height: 391px;
   filter: grayscale(100%);
   transition: all 0.4s linear;
+}
+@media screen and (max-width: 450px) {
+  .profil__picture img, .profil__text img {
+    width: 286px;
+    height: 280px;
+  }
 }
 .profil__picture img:hover, .profil__text img:hover {
   filter: grayscale(20%);
