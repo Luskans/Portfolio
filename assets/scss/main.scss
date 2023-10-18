@@ -12,32 +12,71 @@ $grey: #808080;
         padding: 50px 10px 50px 10px;
     }
 }
+
+@mixin d-cent-cent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin slide {
     animation: slideIn 1.2s ease-in-out forwards;
 }
 
+@mixin sticker-image {
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a, p, li, h1, h2 {
     color: darken($grey, 20);
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
 }
 
 a {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 p {
-    margin-bottom: 0 !important;
+    margin: 0 ;
     letter-spacing: 2px;
-    font-family: 'Quicksand', sans-serif;
+    line-height: 1.8em;
     @media screen and (max-width: 450px) {
-        font-size: 0.9em !important;
+        font-size: 0.9em;
+    }
+}
+
+svg {
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        padding: 3px;
+        border-radius: 50%;
+        box-shadow: 0 0 5px $grey;
     }
 }
 
 body {
-    background-color: rgb(255, 255, 255) !important;
+    background-color: rgb(255, 255, 255);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+main {
+    @include d-cent-cent();
+    flex-direction: column;
 }
 
 .gradient {
@@ -79,6 +118,7 @@ body {
 }
 
 .nav {
+    display: flex;
     position: fixed;
     width: 100%;
     height: 80px;
@@ -86,39 +126,40 @@ body {
     transition: all 0.3s ease-in-out;
 
     &__items {
-        padding: 0 !important;
+        @include d-cent-cent();
+        gap: 50px;
+        padding: 0;
         width: 100%;
-        margin-bottom: 0;
+        margin: 0;
+        @media screen and (max-width: 450px) {
+            gap: 40px;
+            padding: 0 20px 0 20px;
+        }
     }
 
     &--scroll {
         height: 60px;
-        background-color: white !important;
+        background-color: white;
         border-bottom: 1px solid rgb($grey, 0.5);
     }
 
     &__item {
         list-style: none;
-        font-size: 1.1em !important;
+        font-size: 1.1em;
         transition: all 0.4s ease-in-out;
         letter-spacing: 4px;
         @media screen and (max-width: 450px) {
-            font-size: 0.9em !important;
+            font-size: 0.9em;
         }
     
         &--scroll {
-            font-size: 0.9em !important;
+            font-size: 0.9em;
             @media screen and (max-width: 450px) {
-                font-size: 0.7em !important;
+                font-size: 0.7em;
             }
         }
 
-        &:hover {
-            padding-bottom: 6px;
-            border-bottom: 2px solid $grey;
-        }
-
-        &.on-part {
+        &:hover, .on-part {
             padding-bottom: 6px;
             border-bottom: 2px solid $grey;
         }
@@ -126,12 +167,50 @@ body {
 }
 
 .header {
-    height: 100%;
-    min-height: 100vh;
     @include box-space();
-    // @media screen and (max-width: 520px) {
-    //     min-height: 80vh;
-    // }
+    @include d-cent-cent();
+    height: 100%;
+    min-height: calc(100vh - 200px);
+    flex-direction: column;
+    gap: 50px;
+    @media screen and (max-width: 450px) {
+        min-height: calc(100vh - 100px);
+    } 
+
+    &__title {
+        font-size: 2.6em;
+        font-weight: 100;
+        margin: 0;
+        letter-spacing: 20px;
+        line-height: 100px;
+        font-family: 'Quicksand', sans-serif;
+        width: 100%;
+        text-align: center;
+        @media screen and (max-width: 520px) {
+            font-size: 2em;
+            letter-spacing: 16px;
+            // min-width: 400px;
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 1.2em;
+            letter-spacing: 12px;
+            line-height: 80px;
+        }
+    }
+
+    &__subtitle {
+        @include d-cent-cent();
+        flex-direction: row;
+        gap: 20px;
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+        }
+
+        & > div {
+            @include d-cent-cent();
+            gap: 16px;
+        }
+    }
 
     &__light {
         background-color: greenyellow;
@@ -143,24 +222,6 @@ body {
         transition: all 0.3s linear;
     }
 
-    &__title {
-        // font-family: 'Rajdhani', sans-serif;
-        letter-spacing: 20px;
-        line-height: 100px;
-        font-family: 'Quicksand', sans-serif;
-        width: 100%;
-        text-align: center;
-        @media screen and (max-width: 520px) {
-            font-size: 1.4em;
-            // min-width: 400px;
-        }
-        @media screen and (max-width: 450px) {
-            font-size: 1.2em;
-            letter-spacing: 12px;
-            line-height: 80px;
-        }
-    }
-
     &__statut {
         letter-spacing: 4px;
     }
@@ -168,21 +229,27 @@ body {
 
 .profil {
     @include box-space();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
     opacity: 0;
-    // animation: slideIn 1s forwards;
 
     &.in-view {
         @include slide();
-        // animation-delay: 0.5s;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
     }
 
     &__picture, &__text {
         max-width: 400px;
-        // min-width: 340px;
         text-align: justify;
-        @media screen and (max-width: 450px) {
-            // padding: 0 40px 0 40px;
-        }
 
         span {
             font-weight: bolder;
@@ -199,6 +266,13 @@ body {
         }
     }
 
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
     &__mail p {
         transition: all 0.2s linear;
 
@@ -208,7 +282,16 @@ body {
     }
 
     &__buttons {
+        @include d-cent-cent();
+        gap: 20px;
         button {
+            @include d-cent-cent();
+            gap: 8px;
+            font-size: 1em;;
+            width: 80px;
+            height: 40px;
+            border-radius: 8px;
+            color: white;
             background-color: rgba($grey, 0.5);
             border: none;
 
@@ -227,6 +310,9 @@ body {
 
 .portfolio {
     @include box-space();
+    @include d-cent-cent();
+    flex-direction: column;
+    gap: 50px;
     @media screen and (max-width: 450px) {
         padding: 50px 0 50px 0;
     }
@@ -241,6 +327,10 @@ body {
 
     &__icons {
         margin: 40px 0 40px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
         svg {
             opacity: 0;
 
@@ -250,18 +340,31 @@ body {
         }
     }
 
+    &__stickers {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
     .sticker {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         max-width: 400px;
-        width: 100%;
         min-width: 320px;
-        opacity: 0;
+        width: 100%;
         margin-bottom: 40px;
+        opacity: 0;
 
         &.in-view {
             @include slide();
         }
 
         &__stamps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             @media screen and (max-width: 400px) {
                 padding: 0 20px 0 20px;
                 justify-content: center;
@@ -297,82 +400,55 @@ body {
 
             &--1 {
                 background: url('../images/luxury-service.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 5s linear;
             }
 
             &--2 {
                 background: url('../images/payetonpote.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 2s linear;
             }
 
             &--3 {
                 background: url('../images/combat.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 1s linear;
             }
 
             &--4 {
                 background: url('../images/comparOperator.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--5 {
                 background: url('../images/tower-defense.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--6 {
                 background: url('../images/quizz.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--7 {
                 background: url('../images/drumpad.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--8 {
                 background: url('../images/animation-pokemon.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--9 {
                 background: url('../images/the-mountain.png');
-                background-position-x: center;
-                background-position-y: top;
-                background-size: cover;
-                background-repeat: no-repeat;
+                @include sticker-image();
                 transition: background-position-y 8s linear;
             }
         }
@@ -384,17 +460,10 @@ body {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 20px 0;
     font-size: 0.8em;
-}
-
-svg {
-    transition: all 0.2s ease-in-out;
-    
-    &:hover {
-        padding: 3px;
-        border-radius: 50%;
-        box-shadow: 0 0 5px $grey;
-    }
 }
 
 @keyframes lightning {
@@ -420,8 +489,4 @@ svg {
       transform: translateY(0);
       opacity: 1;
     }
-}
-
-@media screen and (max-width: 450px) {
-
 }
