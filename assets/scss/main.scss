@@ -400,55 +400,55 @@ main {
             }
 
             &--1 {
-                background: url('../images/luxury-service.png');
+                background: url('../images/luxury-service.webp');
                 @include sticker-image();
                 transition: background-position-y 5s linear;
             }
 
             &--2 {
-                background: url('../images/payetonpote.png');
+                background: url('../images/payetonpote.webp');
                 @include sticker-image();
                 transition: background-position-y 2s linear;
             }
 
             &--3 {
-                background: url('../images/combat.png');
+                background: url('../images/combat.webp');
                 @include sticker-image();
                 transition: background-position-y 1s linear;
             }
 
             &--4 {
-                background: url('../images/comparOperator.png');
+                background: url('../images/comparOperator.webp');
                 @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--5 {
-                background: url('../images/tower-defense.png');
+                background: url('../images/tower-defense.webp');
                 @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--6 {
-                background: url('../images/quizz.png');
+                background: url('../images/quizz.webp');
                 @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--7 {
-                background: url('../images/drumpad.png');
+                background: url('../images/drumpad.webp');
                 @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--8 {
-                background: url('../images/animation-pokemon.png');
+                background: url('../images/animation-pokemon.webp');
                 @include sticker-image();
                 transition: background-position-y 3s linear;
             }
 
             &--9 {
-                background: url('../images/the-mountain.png');
+                background: url('../images/the-mountain.webp');
                 @include sticker-image();
                 transition: background-position-y 8s linear;
             }

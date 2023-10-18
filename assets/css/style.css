@@ -373,7 +373,7 @@ main {
   filter: grayscale(0%);
 }
 .portfolio .sticker__image--1 {
-  background: url("../images/luxury-service.png");
+  background: url("../images/luxury-service.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
@@ -381,7 +381,7 @@ main {
   transition: background-position-y 5s linear;
 }
 .portfolio .sticker__image--2 {
-  background: url("../images/payetonpote.png");
+  background: url("../images/payetonpote.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
@@ -389,7 +389,7 @@ main {
   transition: background-position-y 2s linear;
 }
 .portfolio .sticker__image--3 {
-  background: url("../images/combat.png");
+  background: url("../images/combat.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
@@ -397,7 +397,7 @@ main {
   transition: background-position-y 1s linear;
 }
 .portfolio .sticker__image--4 {
-  background: url("../images/comparOperator.png");
+  background: url("../images/comparOperator.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
@@ -405,7 +405,7 @@ main {
   transition: background-position-y 3s linear;
 }
 .portfolio .sticker__image--5 {
-  background: url("../images/tower-defense.png");
+  background: url("../images/tower-defense.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
@@ -413,7 +413,7 @@ main {
   transition: background-position-y 3s linear;
 }
 .portfolio .sticker__image--6 {
-  background: url("../images/quizz.png");
+  background: url("../images/quizz.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
@@ -421,7 +421,7 @@ main {
   transition: background-position-y 3s linear;
 }
 .portfolio .sticker__image--7 {
-  background: url("../images/drumpad.png");
+  background: url("../images/drumpad.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
@@ -429,7 +429,7 @@ main {
   transition: background-position-y 3s linear;
 }
 .portfolio .sticker__image--8 {
-  background: url("../images/animation-pokemon.png");
+  background: url("../images/animation-pokemon.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
@@ -437,7 +437,7 @@ main {
   transition: background-position-y 3s linear;
 }
 .portfolio .sticker__image--9 {
-  background: url("../images/the-mountain.png");
+  background: url("../images/the-mountain.webp");
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
