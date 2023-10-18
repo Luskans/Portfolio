@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,8 +42,6 @@ svg:hover {
 
 body {
   background-color: rgb(255, 255, 255);
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,7 +131,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 100%;
-  min-height: calc(100vh - 200px);
+  min-height: 100vh;
   flex-direction: column;
   gap: 50px;
 }
@@ -136,11 +139,6 @@ main {
   .header {
     width: 90%;
     padding: 50px 10px 50px 10px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .header {
-    min-height: calc(100vh - 100px);
   }
 }
 .header__title {
