@@ -183,7 +183,7 @@ main {
   gap: 16px;
 }
 .header__light {
-  background-color: greenyellow;
+  background-color: rgb(255, 224, 47);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -467,7 +467,7 @@ footer {
     box-shadow: none;
   }
   15% {
-    box-shadow: 0px 0px 6px rgb(40, 202, 0);
+    box-shadow: 0px 0px 6px rgb(255, 198, 9);
   }
   30% {
     box-shadow: none;
